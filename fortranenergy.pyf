@@ -1,0 +1,11 @@
+python module fortranenergy
+    interface
+        function run(ri, rj, chgi, chgj) result (e)
+        real(8),intent(in) :: ri(3)
+        real(8),intent(in) :: rj(3)
+        real(8),intent(in) :: chgi
+        real(8),intent(in) :: chgj
+        real(8) :: e
+        end function run
+    end interface
+end python module fortranenergy
