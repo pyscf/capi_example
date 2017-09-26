@@ -52,6 +52,8 @@ cons
 4. str in python3 is unicode string object. A python single char string
   cannot be used with ctypes.c_char. see
   https://docs.python.org/2/library/ctypes.html
+5. The dynamic loader may mess up the libraries if two dynamic libraries have
+  the same name and one was already loaded in memory
 
 
 f2py

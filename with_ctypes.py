@@ -24,6 +24,7 @@ def nparray_pointer(coord, charge):
                               ctypes.byref(ctypes.c_double(charge[j])))
     return e
 
+# fname is a string of the function name defined in C/Fortran
 def call_by_symbol(fname, coord, charge):
     coord = numpy.ascontiguousarray(coord)
     charge = numpy.ascontiguousarray(charge)
@@ -40,6 +41,7 @@ def call_by_symbol(fname, coord, charge):
                     ctypes.byref(ctypes.c_double(charge[j])))
     return e
 
+# fdistname is a string of the function name defined in C/Fortran
 def call_with_fpointer(fdistname, coord, charge):
     import _ctypes
     coord = numpy.ascontiguousarray(coord)
